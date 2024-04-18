@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<title>................</title>
+<style>
+.center{
+         text-align:center;
+		 }
+.button{
+        color:blue;
+		font-size:15px;
+	}	
+
+</style>
+</head>
+
+<body>
+
+<h1><big><center><u><b>Welcom in Crimenal Reporting</b></u></center></big></h1>
+
+<script>
+function validation(){
+		var username=document.myform.name.value;
+		var password=document.myform.password.value;
+		var password2=document.myform.password2.value;
+		var box=document.getElementById("alert").value;
+        
+		if(username==null || username==""){
+		alert("name can't be blank!!");
+		return false;
+		}
+		if(password.length<8){
+		alert("password must be atleast 8 character long");
+		return false;
+		}
+
+		if(password!=password2){
+		alert("password must be same!!");
+		return false;
+		}
+		alert("OTP:101010");
+		return true;
+}
+
+</script>
+</br>
+</br>
+</br>
+</br>
+<!--<fieldset>
+<legend class="center"><u>Login</u></legend>-->
+</br>
+
+<form name="myform" method="post"  onsubmit="return validation()" id="alert" action="project_1.html">
+
+
+		<div class="center">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" placeholder="Enter name" required />
+		</div>
+		</br>
+
+		<div class="center">
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" placeholder="Atleast 8 character"required />
+		</div>
+		</br>
+
+		<div class="center">
+		<label for="password2">Re-Enter:</label>
+		<input type="password" id="password2" name="password2" placeholder="must be same" required  />
+		</div>
+		</br>
+
+		<div class="center">
+		<input class="button" style="text-align:center"  type="submit" value="Login"/>
+		</div>
+</form>
+<!-- </fieldset> -->
+
+</body>
+</html>
+

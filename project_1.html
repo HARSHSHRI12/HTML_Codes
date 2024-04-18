@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<body>
+<center><h4>Note:<u> please enter OTP</u></h4>
+<p>please enter the correct otp and read further</P></center>
+<script>
+function check(){
+var otp=document.myform.otp.value;
+var number;
+ if(otp.length<6)
+{
+alert("otp must be atleast 6 character long");
+return false;
+}
+else if(otp==101010){
+prompt("enter your name");
+return true;
+}
+else{
+alert("Please enter a valid OTP");
+return false;
+}
+}
+</script>
+<form name="myform" action="js_Mini_project.html" onsubmit="return check()">
+<div style="text-align:center">
+<input type="number" name="otp" placeholder="Enter OTP">
+<input type="submit" value="Submit">
+</div>
+</form>
+</body>
+</html>

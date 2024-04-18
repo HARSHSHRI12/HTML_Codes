@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<title>check and uncheck validation</title>
+</head>
+<body>
+<script>
+		function validation(){
+		let name=document.f1.name.value;
+		let password=document.f1.password.value;
+		let status=false;
+
+		if(name.length<1){
+		document.geElementById("nameloc").innerHTML="<img src='unchack.png'/>please enter your name";
+		status false;
+		}
+
+		else{
+		document.getElementById("nameloc").innerHTML="<img src='ckeck.png'/>";
+		status true;
+		}
+
+		if(password.length<6){
+		document.getElementById("passwordloc").innerHTML="<img scrc='unchack.png'/>password must be atleast 6 character";
+		status false;
+		}
+
+		else{
+		document.getElementById("passwordloc").innerHTML="<img src='check.png'/>";
+		return status;
+		}
+}
+</script>
+
+<form name="f1" onsubmit="return validation()">
+
+<table>
+		<tr><td>Name:</td><td><input type="text" name="name" placeholder="Enter name"/>
+		<span id="nameloc"></span></td></tr>
+
+		<tr><td>Password:</td><td><input type="password" name="password" placeholder="Enter password"/>
+		<span id="passwordloc"></span></td></tr>
+ 
+        <tr><td colspan="2"><input type="submit" value="Register"></td></tr>
+
+</table>
+</form>
+
+</body>
+</html>
+
+
+
+

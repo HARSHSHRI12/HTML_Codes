@@ -1,0 +1,97 @@
+ <!doctype html>  
+<html>
+<head>
+
+<style>
+
+
+/* Links - change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.bg{
+      background-image : url("C:\Users\harsh shrivastava\Downloads\project1.jpg");
+        height: 100%; 
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;	  
+  }
+  a.{
+     color:black;
+	 font-size:15px;
+	 }
+a:hover{
+        color: red;
+		font-size:18px;
+		}
+.select{
+        color:blue;
+        font-size:15px;
+}
+.option{
+         color:blue;
+        font-size:13px;
+}
+  </style>
+ <base href="my html learning">
+</head>
+<body>
+ <script>
+ function choice(){
+ var select=document.getElementById("selected");
+ var option=select.option[select.selectedIndex].value;
+ if(option=="Top Crime"){
+ document.write("hello you are chice the top criminal option");
+ }
+ }
+ </script>
+
+ 
+ 
+ 
+ 
+ <header>
+ <table width="100%" style="boarder-collapse:collapse;">
+ <tr>
+        <td collapse="2" style="background-color:#1a1a1a; text-align:center;">
+        <h3 style="font-size:30px; color:#ff6a6a;">CRIMINAL WEB<h3>
+
+   </td>
+  </tr>
+  
+  <tr>
+  <td collapse="2"style="background-color:#666666">
+  <ul>
+  <a href="">Home</a>        
+  
+  <a href="">Manu</a>
+  
+  <a href="">Know About</a>
+  
+  <a href="js_Mini_project.html">Check Crime</a>
+  
+  <a href="">Letest Criminal</a>
+  
+  </ul>
+  </td>
+ </tr>
+ 
+<tr>
+<td style="background-color:#e6e6fa; width:100%; height:400px;text-align:center;">
+<center><h1>Avoied the crime And be alert</h1></center>
+		 
+		 <select name="select" value="LIst Of Crime"id="selected">
+		 <a href=""><option value="Top Crime">Top Crime</option></a>
+		 <a href=""><option value="Medium crime">Medium Crime</option></a>
+		 <a href=""><option value="Small crime">Small Crime</option></a>
+         <input class="option" type="button" value="check" onclick="choice()"/>
+</select>
+</td>
+</tr>
+</body>
+</html>   
+  
+  
+  

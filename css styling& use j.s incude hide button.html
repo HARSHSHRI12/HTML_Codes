@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body style="background-color:green">
+<style>
+.heading{
+background-color:red;
+text-color:green;
+text-align:center;
+color:orange;
+border-color:yellow;
+font-size:30px;
+panding:20px;
+}
+
+.harsh{
+background-color:yellow;
+font-size:20px;
+text-align:center;
+color:purple;
+text-color:orange;
+}
+
+.harsh2{
+font-size:10px;
+color:green;
+text-color:pink;
+}
+
+
+</style>
+
+
+<h1 class="harsh2">click the botton to hide all element with the class name"heading"</h1>
+
+<button onclick="myFunction()">hide element</button>
+
+<h1 class="harsh2">DATE AND TIME IN SCRIPTING<h1>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+
+click the button to view today date and time with GMT.</button>
+
+<p id="demo"></p>
+
+<h1 class="heading">this is css styleing attribute</h1>
+<p class="harsh">css diging is the very powerful styleing attribute</p>
+
+<h1 class="heading">what is html?</h1>
+<p class="harsh"> html is the hypertext markup language.</p>
+
+<h1 class="heading">what is the full form of basic?</h1>
+<p class="harsh">full form of basic= beeginner's all purpos sebloic instraction code.</p>
+
+<script>
+
+function myFunction(){
+var x = document.getElementsByClassName("heading");
+
+for (var i = 0; i < x.length; i++) {
+x[i].style.display = "none";
+}
+}
+
+
+
+
+
+
+document.getElementById("demo").style.fontSize="20px";
+
+document.getElementById("demo").style.color="brown";
+
+document.getElementById("demo").style.backgroundColor="orange";
+
+</script>
+
+<button type="button" onclick="myFunction()">click me!</button>
+
+
+
+
+</body>
+</html>

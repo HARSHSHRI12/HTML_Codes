@@ -1,0 +1,47 @@
+ul{
+display:flex;
+background-color:#1D5B60;
+margin-top:0;
+padding:20px;
+text-decoration:none;
+}
+li{
+	list-style-type:none;
+}
+a{
+	color:black;
+	text-decoration:none;	
+}
+a:hover{
+         color:white;
+
+}
+
+.set{
+	margin-left:40px;
+	 transition-duration:2s;
+     font-size:20px;
+}
+.set:hover{
+              background-color:red;
+			  padding:10px 10px;
+
+}
+body{
+	background-image:url('achivment.jpg');
+	background-size:cover;
+	background-attachment:scroll;
+	background-repeat:no-repeat;
+
+}
+p{
+	color:solid black;
+}
+p:hover{
+        color:white;
+}
+.seth1{
+	margin-top:50px;
+	
+}
+

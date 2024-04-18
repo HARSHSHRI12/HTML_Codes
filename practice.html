@@ -1,0 +1,63 @@
+ <!doctype html> 
+<html>
+<body>
+<h1><u>Hello Welcome to practice sheet</u></h1>
+<script>
+function psame(){
+var pass=document.forms["good"].elements["pass"].value;
+var pass1=document.forms["good"].elements["pass1"].value;
+if(pass===pass1){
+alert("well done you are a great loging");
+return true;
+}
+else{
+alert("you have no basic idea to login this page");
+return false;
+  }
+  }
+</script>
+<form name="good" onsubmit="return psame()">
+<label for="match">Password:</label>
+<input type="password" id="match"  name="pass"/>
+</br> 
+<label for="match1">Re-Enter:</label>
+<input type="password" id="match1" name="pass1"/>
+
+<input type="submit"/>
+</form>
+</body>
+</html> 
+
+
+
+<!--<!doctype html>
+<html>
+<body>
+<h1><u>Hello Welcome to practice sheet</u></h1>
+<script>
+function psame(){
+  // Accessing values from inputs
+  var pass = document.forms["good"].elements["pass"].value;
+  var pass1 = document.forms["good"].elements["pass1"].value;
+
+  // Comparing passwords
+  if(pass === pass1){
+    alert("well done you are great at logging in");
+    return true; // Form can be submitted if passwords match
+  }
+  else{
+    alert("you have no basic idea how to login to this page");
+    return false; // Form should not be submitted as passwords do not match
+  }
+}
+</script>
+<form name="good" onsubmit="return psame()">
+<label for="match">Password:</label>
+<input type="password" id="match" name="pass"/>
+<br/>
+<label for="match1">Re-Enter:</label>
+<input type="password" id="match1" name="pass1"/>
+<input type="submit"/>
+</form>
+</body>
+</html>-->

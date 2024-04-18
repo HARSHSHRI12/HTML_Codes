@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>read text file</title>
+
+</head>
+<body>
+		<input type="file" id="upl">
+</br>
+		<p id="opb">hello.....................</p>
+		<script > 
+		
+			console.log('hi my name is harsh');
+
+			let upload = document.getElementById("upl");
+
+			let outputBx = document.getElementById("opb");
+			const reader = new FileReader();
+
+			upload.addEventListener('change', (e) => {
+				console.log("e " + e);
+				console.log("target " + e.target);
+				console.log("e.target.result " + e.target.result);
+				outputBx.innerHTML = e.target.result;
+			});		
+		
+		</script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <title>Crime Management System</title>
+</head>
+<body>
+    <h1>Crime Management System</h1>
+
+    <form id="crimeForm">
+        <label for="crimeType">Crime Type:</label>
+        <input type="text" id="crimeType" required>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" required></textarea>
+
+        <button type="button" onclick="addCrime()">Add Crime</button>
+    </form>
+
+    <h2>Crime List</h2>
+    <table id="crimeTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Crime Type</th>
+                <th>Location</th>
+                <th>Date</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody id="crimeList">
+            <!-- Crime entries will be added here dynamically -->
+        </tbody>
+    </table>
+
+    <script>
+        function addCrime() {
+            // Get form values
+            var crimeType = document.getElementById('crimeType').value;
+            var location = document.getElementById('location').value;
+            var date = document.getElementById('date').value;
+            var description = document.getElementById('description').value;
+
+            // Create a new row for the crime table
+            var newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${Date.now()}</td>
+                <td>${crimeType}</td>
+                <td>${location}</td>
+                <td>${date}</td>
+                <td>${description}</td>
+            `;
+
+            // Add the new row to the table
+            var crimeTable = document.getElementById('crimeList');
+            crimeTable.appendChild(newRow);
+
+            // Clear form fields
+            document.getElementById('crimeForm').reset();
+        }
+    </script>
+</body>
+</html>
